@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 
 # creating an api endpoint 2 GET Request Query using slack_name and track
-@app.route('/htask1', methods=['GET'])
+@app.route('/api', methods=['GET'])
 def get_user_data():
     slack_name = request.args.get('slack_name')
     current_day = datetime.now().strftime("%A")
