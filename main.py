@@ -1,11 +1,11 @@
 from flask import Flask, request, jsonify
 from datetime import datetime
 
-
 app = Flask(__name__)
 
-# creating a api endpoint 2 GET Request Query using slack_name and track
-@app.route('/hngtask1', methods=['GET'])
+
+# creating an api endpoint 2 GET Request Query using slack_name and track
+@app.route('/htask1', methods=['GET'])
 def get_user_data():
     slack_name = request.args.get('slack_name')
     current_day = datetime.now().strftime("%A")
@@ -24,8 +24,6 @@ def get_user_data():
         "status_code": status_code
     }
     return jsonify(data)
-
-
 
 
 if __name__ == '__main__':
