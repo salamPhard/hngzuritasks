@@ -1,1 +1,2 @@
 #This is the requirements file
+flask~=2.3.3
